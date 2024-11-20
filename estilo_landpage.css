@@ -1,0 +1,97 @@
+body {
+    background-color: #f0f8ff;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 28px;
+    color: #0044cc; 
+}
+h3 {
+    margin-top: 20px; 
+    margin-bottom: 10px; 
+    font-size: 22px; 
+    color: #0044cc; 
+}
+ p {
+    font-size: 20px;
+    color: black;
+    margin-bottom: 15px;
+}
+
+select, button {
+    margin-top: 20px;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 200px; 
+}
+
+button {
+    background-color: #0044cc; 
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button:hover {
+    background-color: #0033aa; 
+}
+
+button.historico {
+    background-color: #28a745; 
+    margin-top: 10px;
+}
+
+button.historico:hover {
+    background-color: #218838; 
+}
+
+ul {
+    text-align: left;
+    margin: 10px auto 20px;
+    padding: 0;
+    list-style: none;
+    max-width: 300px;
+    text-align: center;
+}
+
+ul li {
+    background-color: #f9f9f9;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+a {
+    color: #0044cc;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.mensagem1{
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
