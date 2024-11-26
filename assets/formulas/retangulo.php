@@ -58,10 +58,8 @@
     <p>Um <strong>retângulo</strong> é uma figura geométrica de quatro lados onde todos os ângulos internos são ângulos retos (90 graus). As características principais de um retângulo são sua base e sua altura, que são os lados adjacentes.</p>
     
     <h2>Fórmulas</h2>
-    <p><strong>Área</strong>: A fórmula para calcular a área de um retângulo é:</p>
-    <p><em>Área = base × altura</em></p>
-    <p><strong>Perímetro</strong>: A fórmula para calcular o perímetro de um retângulo é:</p>
-    <p><em>Perímetro = 2 × (base + altura)</em></p>
+    <center><p><em>Área = base × altura</em></p></center>
+    <center><p><em>Perímetro = 2 × (base + altura)</em></p></center>
     
     <form id="aaai"method="POST" action="">
         <label for="tipo">Tipo de Cálculo:</label>
@@ -113,7 +111,7 @@
     }
     ?>
     </div>
-     <?php include 'voltar.php';?>
+    <?php include '../includes/voltar.php';?>
 
      <script>
         function limparCampos() {

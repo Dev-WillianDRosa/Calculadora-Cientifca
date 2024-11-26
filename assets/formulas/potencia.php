@@ -63,7 +63,7 @@
     <h1><strong>Calculadora de Potenciação</strong></h1>
     <p>A <strong>potenciação</strong> é uma operação matemática que envolve dois números: a base e o expoente. O resultado da potenciação, ou potência, é obtido multiplicando a base por ela mesma o número de vezes indicado pelo expoente.</p>
     <h2><strong>Fórmula para Calcular a Potenciação</strong></h2>
-    <img src="formula1.jpeg" class="center-img" alt="Fórmula para Potenciação">
+    <img src="../img/formula1.jpeg" class="center-img" alt="Fórmula para Potenciação">
     <form id="cadelo" action="<?php echo $_SERVER['PHP_SELF'];?>" method="POST">
         <label for="base"><strong>Insira a Base:</strong>
             <input type="number" id="base" name="base" step="any" placeholder="Digite a Base" required><br><br>
@@ -89,7 +89,7 @@
     ?>
     </div>
 
-    <?php include 'voltar.php';?>
+    <?php include '../includes/voltar.php';?>
 
     <script>
         function limparCampos() {

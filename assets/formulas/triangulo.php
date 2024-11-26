@@ -94,10 +94,10 @@
         <p>Área do Triangulo Isóceles:</p>
         <p>Área do Triangulo Escaleno:</p>
         <p>Perimetro dos Triangulos:</p>
-        <img src="formulaequilatero.PNG" class="imagem1">
-        <img src="formula2.jpeg" class="imagem2">
-        <img src="formula3.jpeg" class="imagem3">
-        <img src="perimetro.jpeg" class="imagem4">
+        <img src="../img/formulaequilatero.PNG" class="imagem1">
+        <img src="../img/formula2.jpeg" class="imagem2">
+        <img src="../img/formula3.jpeg" class="imagem3">
+        <img src="../img/perimetro.jpeg" class="imagem4">
     <form id="pink"action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <label for="calculo">Escolha o cálculo:</label>
         <select name="calculo" id="calculo"> 
@@ -209,7 +209,7 @@
     }
     ?>
     </div>
-     <?php include 'voltar.php';?>
+    <?php include '../includes/voltar.php';?>
       <script>
         function limparCampos() {
             document.getElementById('pink').reset();

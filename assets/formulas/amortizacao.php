@@ -91,7 +91,7 @@
         ?>
     </div>
 
-    <?php include 'voltar.php';?>
+    <?php include '../includes/voltar.php';?>
 
     <script>
         function limparCampos() {

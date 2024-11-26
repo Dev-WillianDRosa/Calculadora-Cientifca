@@ -60,7 +60,7 @@
         }
     </style>
 </head>
-<>
+
     <h1>Calculadora de Juros Simples e Compostos</h1>
     <p>Os <strong>juros simples</strong> são calculados apenas sobre o valor principal inicial durante todo o período de tempo. Ou seja, a taxa de juros é aplicada <strong>somente sobre o valor inicial, não sobre os juros acumulados.</strong></p>
     <center><p><em>J = P × r × t</em></p></center>
@@ -120,7 +120,7 @@
     }
     ?>
     </div>
-    <?php include 'voltar.php';?>
+    <?php include '../includes/voltar.php';?>
     <script> //primeiro javascript feito na unha e sem ajuda :)
         function limparCampos(){ 
             document.getElementById('boleto').reset();

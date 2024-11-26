@@ -1,6 +1,6 @@
 <?php
-include("conexao.php");
-include("data.php");
+include(__DIR__ . '/../includes/conexao.php');
+include(__DIR__ . '/../includes/data.php'); 
 
 $mensagem = ""; // Variável para armazenar a mensagem
 
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST')
             $sqlUpdate = "UPDATE usuarios SET senha = '$novaSenha' WHERE email = '$email'";
             if ($mysqli->query($sqlUpdate)) {
                 $mensagem = "Senha atualizada com sucesso! 
-                <a href='index.php'>Fazer Login</a>";
+                <a href='../index.php'>Fazer Login</a>";
             } else {
                 $mensagem = "<span class='erro'>Erro ao atualizar a senha: " . $mysqli->error . "</span>";
             }

@@ -81,9 +81,9 @@
         triângulos retângulos. Afirma que em um triângulo retângulo, o quadrado da hipotenusa (o lado oposto ao ângulo
         reto) é igual à soma dos quadrados dos catetos (os dois lados que formam o ângulo reto).</p>
     <h2><strong>Formulas de Calculo</strong></h2>
-    <img src="hipotenusa.jpeg" alt="Fórmula para calcular a hipotenusa">
-    <img src="cateto1.jpeg" alt="Fórmula para calcular o cateto 1">
-    <img src="cateto2.jpeg" alt="Fórmula para calcular o cateto 2">
+    <img src="../img/hipotenusa.jpeg" alt="Fórmula para calcular a hipotenusa">
+    <img src="../img/cateto1.jpeg" alt="Fórmula para calcular o cateto 1">
+    <img src="../img/cateto2.jpeg" alt="Fórmula para calcular o cateto 2">
 
     <form id="trianguloencapetado" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>">
         <label for="num1"><strong>Numero 1</strong></label>
@@ -155,7 +155,7 @@
     }
 </script>
 
-<?php include 'voltar.php'; ?>
+<?php include '../includes/voltar.php';?>
 </body>
 
 </html>

@@ -70,12 +70,18 @@
 </head>
 <body>
     <h1><strong>Calculadora de Círculo</strong></h1>
-    <p><strong>Um círculo é uma figura geométrica plana composta por todos os pontos que estão a uma mesma distância de um ponto fixo chamado centro. A distância entre qualquer ponto do círculo e o centro é chamada de raio. O círculo é uma das formas básicas mais importantes em geometria e aparece frequentemente em diversos contextos matemáticos e físicos.</strong></p>
+    
+    <p><strong>Um círculo é uma figura geométrica plana composta por todos os pontos 
+    que estão a uma mesma distância de um ponto fixo chamado centro.
+     A distância entre qualquer ponto do círculo e o centro é chamada de raio. 
+     O círculo é uma das formas básicas mais importantes em geometria e aparece frequentemente 
+     em diversos contextos matemáticos e físicos.</strong></p>
+
     <h2><strong>Formulas usadas para o cálculo do círculo</strong></h2>
-    <img src="formulaareacirculo.jpeg" class="imagem1" alt="Fórmula da Área do Círculo">
+    <img src="../img/formulaareacirculo.jpeg" class="imagem1" alt="Fórmula da Área do Círculo">
     <p><strong><em>Fórmula para o Cálculo de Área:</em></strong></p>
     <p><strong><em>Fórmula para o Cálculo do Perímetro:</em></strong></p>
-    <img src="formulaperimetrocirculo.jpeg" class="imagem2" alt="Fórmula do Perímetro do Círculo">
+    <img src="../img/formulaperimetrocirculo.jpeg" class="imagem2" alt="Fórmula do Perímetro do Círculo">
 
     <form id="circuloForm" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <label for="raio"><strong>Raio do Círculo:</strong></label>
@@ -123,7 +129,7 @@
         ?>
     </div>
 
-    <?php include 'voltar.php';?>
+    <?php include '../includes/voltar.php';?>
 
     <script>
         function limparCampos() {

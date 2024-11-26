@@ -1,6 +1,6 @@
 <?php
-include('conexao.php');
-include('data.php');
+include('includes/conexao.php');
+include('includes/data.php');
 session_start();
 
 if (isset($_GET['logout'])) {
@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             echo 'Login bem-sucedido';
 
-            header('Location: landpage.php');
+            header('Location: landpage/landpage.php');
             exit();
 
         } else {
@@ -149,7 +149,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             <button type="submit">Login</button>
             <p class="info-texto">Insira suas credenciais para acessar o sistema.</p>
-            <a href="esqueci_senha.php">Esqueci a senha</a>
+            <a href="senha/esqueci_senha.php">Esqueci a senha</a>
         </form>
     </div>
 </body>

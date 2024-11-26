@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><strong>Calculadora de Progressão Aritmética</strong></title>
+    <title><strong>Calculadora de Progressão Geométrica</strong></title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -41,7 +41,7 @@
         img {
             display: block;
             margin: 0 auto; /* Centraliza as imagens */
-            width: 420px; 
+            width: 320px; 
             height: auto; 
             margin-bottom: 10px; /* Espaçamento inferior */
         }
@@ -60,15 +60,16 @@
         }
     </style>
 </head>
+
 <body>
 
-    <h1><strong>Calculadora de Progressão Aritmética</strong></h1>
-    <p><strong>Uma Progressão Aritmética (P.A.)</strong> é uma sequência de números onde a diferença entre dois termos consecutivos é constante. Essa diferença constante é chamada de razão.</p>
-    <h2><strong>Fórmulas para Calcular Progressão Aritmética</strong></h2>
-    <img src="enesimotermo.jpeg" alt="Fórmula do enésimo termo">
-    <img src="razao.jpeg" alt="Fórmula da razão">
+    <h1><strong>Calculadora de Progressão Geométrica</strong></h1>
+    <p><strong>Uma Progressão Geométrica (P.G.)</strong> é uma sequência numérica em que cada termo, a partir do segundo, é obtido multiplicando o termo anterior por uma constante fixa chamada razão (r).</p>
+    <h2><strong>Fórmulas para o Cálculo da Progressão Geométrica</strong></h2>
+    <img src="../img/eeenesimo.jpeg" alt="Fórmula do n-ésimo termo">
+    <img src="../img/soma.jpeg" alt="Fórmula da soma dos termos">
 
-    <form id="patoantagonista" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
+    <form id="lustre" action="<?php echo $_SERVER['PHP_SELF']; ?>" method="POST">
         <label for="n"><strong>Número de termos:</strong></label>
         <input type="number" name="n" id="n" placeholder="Digite o número de termos" required>
         <br><br>
@@ -77,41 +78,47 @@
         <br><br>
         <label for="opcao"><strong>Escolha o que calcular:</strong></label>
         <select name="opcao" id="opcao" required>
-            <option value="ultimo-termo">Calcular o Último Termo</option>
-            <option value="razao">Calcular a Razão</option>
+            <option value="termo">Calcular o n-ésimo Termo</option>
+            <option value="soma">Calcular a Soma dos Termos</option>
         </select>
         <br><br>
-        <label for="razao"><strong>Razão (necessário apenas para calcular o último termo):</strong></label>
-        <input type="number" name="razao" id="razao" placeholder="Digite a razão">
+        <label for="razao"><strong>Razão:</strong></label>
+        <input type="number" name="razao" id="razao" placeholder="Digite a razão" required>
         <br><br>
         <button type="submit"><strong>CALCULAR</strong></button>
         <button type="button" class="limpar" onclick="limparCampos()"><strong>Limpar</strong></button>
     </form>
-    
-    <div id="gansoprotagonista">
+
+    <div id="gustavodiscutindo">
     <?php
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $numerodetermos = $_POST['n'];
         $primeirotermo = $_POST['a1'];
-        $razao = isset($_POST['razao']) ? $_POST['razao'] : 0;
+        $razao = $_POST['razao'];
         $opcao = $_POST['opcao'];
 
-        function calculopa($numerodetermos, $primeirotermo, $razao, $opcao) {
-            if ($numerodetermos > 0 && $primeirotermo > 0) {
+        function calculopg($numerodetermos, $primeirotermo, $razao, $opcao) {
+            if ($numerodetermos > 0 && $primeirotermo > 0 && $razao > 0) {
                 switch ($opcao) {
-                    case 'ultimo-termo':
-                        return number_format($primeirotermo + ($numerodetermos - 1) * $razao, 2) . ' unidades';
-                    case 'razao':
-                        return number_format(($primeirotermo - 1) / ($numerodetermos - 1), 2) . ' unidades';
+                    case 'termo':
+                        return number_format($primeirotermo * pow($razao, $numerodetermos - 1), 2) . ' unidades';
+                    case 'soma':
+                        if ($razao != 1) {
+                            return number_format($primeirotermo * (pow($razao, $numerodetermos) - 1) / ($razao - 1), 2) . ' unidades';
+                        } else {
+                            return number_format($primeirotermo * $numerodetermos, 2) . ' unidades';
+                        }
                     default:
                         return "Opção inválida";
                 }
+            } else {
+                return "Valores inválidos fornecidos";
             }
         }
 
-        $resultado = calculopa($numerodetermos, $primeirotermo, $razao, $opcao);
+        $resultado = calculopg($numerodetermos, $primeirotermo, $razao, $opcao);
 
-        if ($resultado !== false) {
+        if ($resultado) {
             echo "<p><strong>O resultado é: $resultado</strong></p>";
         } else {
             echo "<p><strong>Por favor, digite valores válidos para realizar o cálculo.</strong></p>";
@@ -119,13 +126,13 @@
     }
     ?>
     </div>
-    
-    <?php include 'voltar.php';?>
-    
+
+    <?php include '../includes/voltar.php';?>
+
     <script>
         function limparCampos() {
-            document.getElementById('patoantagonista').reset();
-            document.getElementById('gansoprotagonista').innerHTML = '';
+            document.getElementById('lustre').reset();
+            document.getElementById('gustavodiscutindo').innerHTML = '';
         }
     </script>
 </body>
