@@ -3,12 +3,6 @@ include('includes/conexao.php');
 include('includes/data.php');
 session_start();
 
-if (isset($_GET['logout'])) {
-    session_destroy();
-    header("Location: index.php"); 
-    exit();
-}
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') { 
     if (empty($_POST['email'])) {
         echo 'Insira o email para prosseguir';
